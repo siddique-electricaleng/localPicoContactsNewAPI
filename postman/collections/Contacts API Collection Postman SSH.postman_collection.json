@@ -1,0 +1,448 @@
+{
+  "info": {
+    "_postman_id": "2cd89e45-060d-4463-8137-c157ea45cc9f",
+    "name": "Contacts API Collection Postman SSH",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "POST /logout",
+          "id": "0cde15a5-5c67-42d3-b181-f55ef04ad465",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"refreshToken\": \"0d8ea3a0dec2f98a22d3f4c06a5f3e54736f69126505b0f201ec671f9\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/logout",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "logout"
+              ]
+            },
+            "description": "Logout API requiring refreshToken in the request body"
+          },
+          "response": []
+        },
+        {
+          "name": "POST /register",
+          "id": "e984803c-a6dd-48a7-b7e7-574ba0c7183d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mobileNumber\": \"01782691592\",\r\n  \"username\": \"abdussalam\",\r\n  \"password\": \"1234\",\r\n  \"name\": \"Abdus Salam\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/register",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /login",
+          "id": "1954325d-b837-4c26-a449-4e1157704681",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"identifier\": \"01681602515\",\r\n\"password\": \"secret\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/login",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /verify-email",
+          "id": "b46fd66e-d6d7-4a16-b25e-6fc48b50032c",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/verify-email?token=e6f3edb23328f3cf30f1b0097b3355fd96862f824ac4c43eb6fb5f1313637a47",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "verify-email"
+              ],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "e6f3edb23328f3cf30f1b0097b3355fd96862f824ac4c43eb6fb5f1313637a47"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /refresh",
+          "id": "670d8101-98e2-46b1-a1b0-9d96bdd27c30",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refreshToken\": \"4d9a6e572c6e57fb6163c4d47cf7590e36ee1e21af67953b3b35d5f8d04bddf2\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/refresh",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /verify-otp",
+          "id": "84d27f33-223a-4a47-9127-e4559d5fb5e5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mobileNumber\": \"01782691592\",\r\n  \"otp\": \"518506\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/verify-otp",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "verify-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /resend-otp",
+          "id": "e9d2630f-92b1-4390-95a7-fe5aa2f26284",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mobileNumber\": \"01782691592\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/resend-otp",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "resend-otp"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "5e0c4b2b-38a3-4019-b807-cd8d79059a2f"
+    },
+    {
+      "name": "contacts",
+      "item": [
+        {
+          "name": "POST /contacts",
+          "id": "a47d8932-6cca-4700-8f97-5bcd6cb76759",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4ODIyMDcsImlhdCI6MTc2NTg4MTMwNywic3ViIjoiMzEyNzBkMzYtOTI5OC00ODQ2LTkwNjAtZjRiZTdkYTlhNmQzIn0.fLifoRlXDdE70mLanthpIY02KMVWVokV54Vh17Gwc4E",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"display_name\": \"Abu Bakr Siddique\",\r\n  \"first_name\": \"Abu Bakr\",\r\n  \"surname\": \"Siddique\",\r\n  \"note\": \"Programmer from FGL\",\r\n  \"source\": \"DB_STORED\",\r\n  \"phones\": [\r\n    {\r\n      \"label\": \"mobile\",\r\n      \"number\": \"+8801681602515\",\r\n      \"is_primary\": true\r\n    }\r\n  ],\r\n  \"emails\": [\r\n    {\r\n      \"label\": \"work\",\r\n      \"email\": \"abu.bakr@fiberathome.net\",\r\n      \"is_primary\": false\r\n    },\r\n    {\r\n      \"label\": \"personal\",\r\n      \"email\": \"ecsesiddique.297@gmail.com\",\r\n      \"is_primary\": true\r\n    }\r\n  ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /contacts",
+          "id": "b06fabdf-552e-4f56-9b10-bd9515682eb6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjY4MjMxNzMsImlhdCI6MTc2NTk1OTE3Mywic3ViIjoiMGFkZTM0NDUtZTM0YS00YTE2LWEzNTgtNTNlZjJkMDllN2YxIn0.Zr-9tfmNS0QrTJBVVZm9OG6oBUFv4mLnBNUmZllSSAI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /contacts/{contactID}",
+          "id": "3ef5d747-3e4b-46b9-a04d-6224c31f37f9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4ODg2MDYsImlhdCI6MTc2NTg4NzcwNiwic3ViIjoiNzZkNDYxYTAtMjg3YS00M2RiLWI1NDAtMTU3NGNlOWZhYzA0In0.geY_KXunbqBbZvtZALaf7ceaQOpdNI2cgEbmqbNpvWc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts/9bfd963c-b9d4-48ea-9f7b-5a59fd50b643",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts",
+                "9bfd963c-b9d4-48ea-9f7b-5a59fd50b643"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /contacts/sync",
+          "id": "83e9da5d-0d12-4823-97df-cb73f1393caf",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4OTc1ODEsImlhdCI6MTc2NTg5NjY4MSwic3ViIjoiYjU4YjlhZjItNTdiZS00YTNlLTliYjgtNTBmZTllZDNmYmIyIn0.rI83p6FtvcCsemTwwv-ciJyCJzyd-8zbG5ba7nQHZCc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"contacts\":\r\n    [\r\n        {\r\n            \"display_name\": \"Abu Bakr Siddique\",\r\n            \"first_name\": \"Abu Bakr\",\r\n            \"surname\": \"Siddique\",\r\n            \"note\": \"Updated via bulk sync\",\r\n            \"source\": \"DB_STORED\",\r\n            \"phones\": [\r\n                {\r\n                \"number\": \"+8801681602515\", \r\n                \"label\": \"mobile\",\r\n                \"is_primary\": true\r\n                }\r\n            ],\r\n            \"emails\":\r\n            [\r\n                {\r\n                    \"label\": \"work\",\r\n                    \"email\": \"abu.bakr@fiberathome.net\",\r\n                    \"is_primary\": false\r\n                },\r\n                {\r\n                    \"label\": \"personal\",\r\n                    \"email\": \"ecsesiddique.297@gmail.com\",\r\n                    \"is_primary\": true\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"display_name\": \"Contact 3\",\r\n            \"first_name\": \"Test\",\r\n            \"surname\": \"Person C\",\r\n            \"note\": \"Created via bulk sync\",\r\n            \"source\": \"DB_STORED\",\r\n            \"phones\": [\r\n            { \"number\": \"018271873123\", \"label\": \"mobile\", \"is_primary\": true }\r\n            ],\r\n            \"emails\": [\r\n            { \"email\": \"a@example.com\", \"label\": \"personal\", \"is_primary\": true }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts/sync",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts",
+                "sync"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "78f334b5-ca81-4fce-a584-07b33ac0d3c4"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "1f4d6abc-d2a9-48d4-a94d-0c0790551ddc",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "1561beb8-9a06-4bd4-9ad7-94e1b06c9b6b",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "90b2d7e1-00b1-42f0-ac4d-9d6ce26cb4dc",
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}

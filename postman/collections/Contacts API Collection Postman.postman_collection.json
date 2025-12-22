@@ -1,0 +1,385 @@
+{
+  "info": {
+    "_postman_id": "ea001919-fa78-4d00-9d8a-fad9e6480ced",
+    "name": "Contacts API Collection Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "POST /logout",
+          "id": "7e60fb57-248c-4237-b217-8683a76a0350",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"refreshToken\": \"cb9e238639c09990257a479694931b09b96fa425820e5dd2d4310864e2c0629e\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/logout",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "logout"
+              ]
+            },
+            "description": "Logout API requiring refreshToken in the request body"
+          },
+          "response": []
+        },
+        {
+          "name": "POST /register",
+          "id": "d5a22319-0a42-4e2e-adcb-683a15fd210d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"mobileNumber\": \"01517869481\",\r\n  \"username\": \"a\",\r\n  \"password\": \"secret\",\r\n  \"name\": \"tan\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/register",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /login",
+          "id": "54c70915-ebb7-4f98-9c82-77ed48e816f3",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"identifier\": \"dev1\",\r\n\"password\": \"secret\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/login",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /verify-email",
+          "id": "b0bcf259-2a6e-4fb0-93e0-eab9807e3636",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/verify-email?token=e6f3edb23328f3cf30f1b0097b3355fd96862f824ac4c43eb6fb5f1313637a47",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "verify-email"
+              ],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "e6f3edb23328f3cf30f1b0097b3355fd96862f824ac4c43eb6fb5f1313637a47"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /refresh",
+          "id": "32e278dc-9f8e-4232-aac0-3b1992935790",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refreshToken\": \"e7c9926365373a3a06a049abc25b880ac0fe069ea65eab81db70347587f65c0b\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/auth/refresh",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "ab9a2c5c-8ede-4ea8-8a84-b085b91129f3"
+    },
+    {
+      "name": "contacts",
+      "item": [
+        {
+          "name": "POST /contacts",
+          "id": "e3048edc-c39d-4270-bd70-e45e838c56d7",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4NzAyMzIsImlhdCI6MTc2NTg2OTMzMiwic3ViIjoiZGZlNTRiYmEtNWYyOC00NWEyLWE0ZTQtNTU0Mjk5ZTRkYWY1In0.3z6yDnM7ErZCUBpAwIP0Nq7OGxrz9QkFEMo5LNd6tzY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"display_name\": \"New test 1\",\r\n  \"first_name\": \"No name\",\r\n  \"surname\": \"Siddique\",\r\n  \"note\": \"Programmer from FGL\",\r\n  \"source\": \"DB_STORED\",\r\n  \"phones\": [\r\n    {\r\n      \"label\": \"mobile\",\r\n      \"number\": \"+8801681602515\",\r\n      \"is_primary\": true\r\n    }\r\n  ],\r\n  \"emails\": [\r\n    {\r\n      \"label\": \"work\",\r\n      \"email\": \"abu.bakr@fiberathome.net\",\r\n      \"is_primary\": false\r\n    },\r\n    {\r\n      \"label\": \"personal\",\r\n      \"email\": \"ecsesiddique.297@gmail.com\",\r\n      \"is_primary\": true\r\n    }\r\n  ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /contacts",
+          "id": "a4988312-4be8-488a-8fe4-8a126368afcb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4MDA5NTcsImlhdCI6MTc2NTgwMDA1Nywic3ViIjoiMGEwOTE1Y2EtZjMzYi00MTQwLWIxMWItYzdhNmNmOWUyYWNmIn0.hm2yCc33GNblfx6i5bP1kilX0fSimhnAIDe-QjlyBrk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /contacts/sync",
+          "id": "a70c9112-9347-4335-843f-84ad90ab7883",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4MDY0OTEsImlhdCI6MTc2NTgwNTU5MSwic3ViIjoiMGEwOTE1Y2EtZjMzYi00MTQwLWIxMWItYzdhNmNmOWUyYWNmIn0.pURr2OBxN99NMRy-zBmApmHpEkKqQIpdtuSbExpbfeI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"contacts\": [\r\n    {\r\n      \"display_name\": \"Another\",\r\n      \"first_name\": \"This is a new guy\",\r\n      \"surname\": \"Who is this\",\r\n      \"note\": \"Programmer\",\r\n      \"source\": \"DB_STORED\",\r\n      \"phones\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"number\": \"+8801681602525\",\r\n          \"is_primary\": true\r\n        }\r\n      ],\r\n      \"emails\": [\r\n        {\r\n          \"label\": \"work\",\r\n          \"email\": \"abu.bakr@fiberathome.net\",\r\n          \"is_primary\": true\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"display_name\": \"Abdur Rahman\",\r\n      \"first_name\": \"Abdur\",\r\n      \"surname\": \"Rahman\",\r\n      \"note\": \"Colleague from Fiber@Home\",\r\n      \"source\": \"LOCAL_IMPORT\",\r\n      \"phones\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"number\": \"+8801712345678\",\r\n          \"is_primary\": true\r\n        }\r\n      ],\r\n      \"emails\": [\r\n        {\r\n          \"label\": \"work\",\r\n          \"email\": \"alice.rahman@company.com\",\r\n          \"is_primary\": true\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts/sync",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts",
+                "sync"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "test POST /contacts/sync",
+          "id": "6549bf52-10d2-491c-8353-449f96d2effb",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4MDA5NTcsImlhdCI6MTc2NTgwMDA1Nywic3ViIjoiMGEwOTE1Y2EtZjMzYi00MTQwLWIxMWItYzdhNmNmOWUyYWNmIn0.hm2yCc33GNblfx6i5bP1kilX0fSimhnAIDe-QjlyBrk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"contacts\": [\r\n    {\r\n      \"display_name\": \"John Doe\",\r\n      \"first_name\": \"John\",\r\n      \"surname\": \"Doe\",\r\n      \"note\": \"Test contact A\",\r\n      \"source\": \"DB_STORED\",\r\n      \"phones\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"number\": \"+8801711111111\",\r\n          \"is_primary\": true\r\n        }\r\n      ],\r\n      \"emails\": [\r\n        {\r\n          \"label\": \"work\",\r\n          \"email\": \"john.doe.test@company.com\",\r\n          \"is_primary\": true\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"display_name\": \"John Doe\",\r\n      \"first_name\": \"John\",\r\n      \"surname\": \"Doe\",\r\n      \"note\": \"Exact duplicate contact (should fail)\",\r\n      \"source\": \"DB_STORED\",\r\n      \"phones\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"number\": \"+8801711111111\",\r\n          \"is_primary\": true\r\n        }\r\n      ],\r\n      \"emails\": [\r\n        {\r\n          \"label\": \"work\",\r\n          \"email\": \"john.doe.test@company.com\",\r\n          \"is_primary\": true\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"display_name\": \"Jane Smith\",\r\n      \"first_name\": \"Jane\",\r\n      \"surname\": \"Smith\",\r\n      \"note\": \"Different contact, same phone + email (should fail on phone/email)\",\r\n      \"source\": \"LOCAL_IMPORT\",\r\n      \"phones\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"number\": \"+8801711111111\",\r\n          \"is_primary\": true\r\n        }\r\n      ],\r\n      \"emails\": [\r\n        {\r\n          \"label\": \"personal\",\r\n          \"email\": \"john.doe.test@company.com\",\r\n          \"is_primary\": true\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/contacts/sync",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "contacts",
+                "sync"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "dbceeec6-4908-49a0-946a-2b38fc4c4e6d"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "f4a6812a-7465-4fcf-8e93-aedb161a68ab",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "799928b3-c6d9-4f42-8525-4b8c1cb34408",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "13400696-625a-4c0e-8b03-173458d0bdb2",
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}

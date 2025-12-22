@@ -1,0 +1,267 @@
+{
+  "info": {
+    "_postman_id": "3ba53329-87a0-499d-92dc-20f39fe31230",
+    "name": "pico_contacts_alt_local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST /contacts test",
+      "id": "2965075e-e84b-4d6a-a001-a74df56b87a7",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU4NzE1NjMsImlhdCI6MTc2NTg3MDY2Mywic3ViIjoiZGZlNTRiYmEtNWYyOC00NWEyLWE0ZTQtNTU0Mjk5ZTRkYWY1In0.B3RXG7o_eLN41raC9ih71GNZIvsAebI4RzL_9WXZu4I",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"contactID\": \"e9bb22ba-342a-40c7-ab62-85416d18a22c\",\r\n  \"display_name\": \"Test Person A\",\r\n  \"first_name\": \"Test\",\r\n  \"surname\": \"PersonA\",\r\n  \"note\": \"first create\",\r\n  \"source\": \"DB_STORED\",\r\n  \"phones\": [\r\n    { \"number\": \"01681602515\", \"label\": \"mobile\", \"is_primary\": true }\r\n  ],\r\n  \"emails\": [\r\n    { \"email\": \"a@example.com\", \"label\": \"personal\", \"is_primary\": true }\r\n  ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://103.12.205.81:7777/api/v1/contacts",
+          "protocol": "http",
+          "host": [
+            "103",
+            "12",
+            "205",
+            "81"
+          ],
+          "port": "7777",
+          "path": [
+            "api",
+            "v1",
+            "contacts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /users",
+      "id": "eaf90c8d-e87f-4ad6-9e50-48b9ef175952",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/users",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /numbers",
+      "id": "0180128f-f33a-4f45-be4b-6e975aa128e2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/numbers",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "numbers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /profile?userID=",
+      "id": "32fb363f-ef60-4509-83e3-e8504d2baec9",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/profile?userID=4ae704ba-e7de-42c3-b13e-fcc848a3823a",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "profile"
+          ],
+          "query": [
+            {
+              "key": "userID",
+              "value": "4ae704ba-e7de-42c3-b13e-fcc848a3823a"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /userContacts?userID=",
+      "id": "c3298721-9c7c-43fd-829b-335a5a0272e8",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/userContacts?userID=20cc22ba-0a87-4855-b362-ba4d7e4e5dde",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "userContacts"
+          ],
+          "query": [
+            {
+              "key": "userID",
+              "value": "20cc22ba-0a87-4855-b362-ba4d7e4e5dde"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /profileCreation",
+      "id": "40e55b90-0c4e-4f9c-8377-ac334eaca3f3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"saad@example.com\",\r\n    \"password_hash\": \"hash_dummy_1\",\r\n    \"name\": \"Saad\",\r\n    \"mobile_number\": \"01681602515\",\r\n    \"avatar_url\": null,\r\n    \"country\": \"BD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/profileCreation",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "profileCreation"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /addContact",
+      "id": "3f74bf1c-ebff-4f2a-bab9-a79007000474",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": \"4ae704ba-e7de-42c3-b13e-fcc848a3823a\",\r\n  \"picoContact\": [\r\n    {\r\n      \"name\": \"nazmul hasan\",\r\n      \"number\": \"+92348274\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/addContact",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "addContact"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /addContactDynamic",
+      "id": "287f71cb-84ec-48ea-938a-8bdecf2d5e5e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": \"4ae704ba-e7de-42c3-b13e-fcc848a3823a\",\r\n  \"picoContact\": [\r\n    {\r\n      \"name\": \"nazmul hasan\",\r\n      \"number\": \"+92348274\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://192.168.32.21:8080/api/v1/addContactDynamic",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "32",
+            "21"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "addContactDynamic"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
