@@ -93,15 +93,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://192.168.32.21:8080/api/v1/users",
+              "raw": "http://103.12.205.81:8890/api/v1/users",
               "protocol": "http",
               "host": [
-                "192",
-                "168",
-                "32",
-                "21"
+                "103",
+                "12",
+                "205",
+                "81"
               ],
-              "port": "8080",
+              "port": "8890",
               "path": [
                 "api",
                 "v1",
@@ -149,15 +149,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/profile?userID=34a0a02b-418f-41e3-aadc-aad26609496b",
+          "raw": "http://103.12.205.81:8890/api/v1/profile?userID=6415f8dd-57aa-42b1-99ce-c025583e8323",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -166,7 +166,7 @@
           "query": [
             {
               "key": "userID",
-              "value": "34a0a02b-418f-41e3-aadc-aad26609496b",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
               "uuid": "72fa841a-7de0-4fbf-8f74-e77741462400"
             }
           ]
@@ -181,15 +181,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/userContacts?userID=34a0a02b-418f-41e3-aadc-aad26609496b",
+          "raw": "http://103.12.205.81:8890/api/v1/userContacts?userID=6415f8dd-57aa-42b1-99ce-c025583e8323",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -198,7 +198,7 @@
           "query": [
             {
               "key": "userID",
-              "value": "34a0a02b-418f-41e3-aadc-aad26609496b",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
               "uuid": "e4f8330b-98ce-4446-9397-7ba38ab06cc4"
             }
           ]
@@ -222,15 +222,15 @@
           }
         },
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/profileCreation",
+          "raw": "http://103.12.205.81:8890/api/v1/profileCreation",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -248,7 +248,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"user_id\": \"34a0a02b-418f-41e3-aadc-aad26609496b\",\r\n  \"picoContact\": [\r\n    {\r\n      \"name\": \"nazmul hasan\",\r\n      \"number\": \"+92348274\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    }\r\n  ]\r\n}",
+          "raw": "{\r\n  \"user_id\": \"6415f8dd-57aa-42b1-99ce-c025583e8323\",\r\n  \"pico_contact\": [\r\n    {\r\n      \"name\": \"nazmul hasan\",\r\n      \"number\": \"+92348274\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    }\r\n  ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -256,15 +256,15 @@
           }
         },
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/addContactDynamic",
+          "raw": "http://103.12.205.81:8890/api/v1/addContactDynamic",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -290,15 +290,15 @@
           }
         },
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/loginMock",
+          "raw": "http://103.12.205.81:8890/api/v1/loginMock",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -316,7 +316,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"user_id\": \"34a0a02b-418f-41e3-aadc-aad26609496b\",\r\n    \"otp\": \"111111\"\r\n}",
+          "raw": "{\r\n    \"user_id\": \"6415f8dd-57aa-42b1-99ce-c025583e8323\",\r\n    \"otp\": \"111111\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -324,15 +324,15 @@
           }
         },
         "url": {
-          "raw": "http://192.168.32.21:8080/api/v1/verifyOTP",
+          "raw": "http://103.12.205.81:8890/api/v1/verifyOTP",
           "protocol": "http",
           "host": [
-            "192",
-            "168",
-            "32",
-            "21"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
-          "port": "8080",
+          "port": "8890",
           "path": [
             "api",
             "v1",
