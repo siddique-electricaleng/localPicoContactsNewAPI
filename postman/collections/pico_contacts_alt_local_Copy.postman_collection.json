@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "3ba53329-87a0-499d-92dc-20f39fe31230",
-    "name": "pico_contacts_local",
+    "_postman_id": "9d8ef22a-8d66-40ef-9c2d-a941375c5197",
+    "name": "pico_contacts_live",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -115,51 +115,13 @@
             }
           },
           "response": []
-        },
-        {
-          "name": "POST /profile/avatar/check",
-          "id": "ae65869f-bc7d-4fe6-9ec8-c4c91c538fc2",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "user_id",
-                  "value": "00874fea-72f3-424a-a4cc-674aab721106",
-                  "type": "text",
-                  "uuid": "19129f31-30a8-427d-b99f-a3b51fb72091"
-                }
-              ],
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_URL}}/api/v1/profile/avatar/check",
-              "host": [
-                "{{base_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "profile",
-                "avatar",
-                "check"
-              ]
-            }
-          },
-          "response": []
         }
       ],
-      "id": "fdc3f553-f7c5-4ece-90b7-e5abcac9e32a"
+      "id": "fd7e183d-3397-4aee-bba8-4c63f474dd1e"
     },
     {
       "name": "GET /profile?userID=",
-      "id": "32fb363f-ef60-4509-83e3-e8504d2baec9",
+      "id": "2ed5c835-7143-47e5-8ba9-43850bdb30b1",
       "request": {
         "auth": {
           "type": "noauth"
@@ -167,10 +129,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{base_URL}}/api/v1/profile?userID=536d6b33-bc40-4974-9725-c3418e2c9869",
+          "raw": "http://103.12.205.81:8890/api/v1/profile?userID=6415f8dd-57aa-42b1-99ce-c025583e8323",
+          "protocol": "http",
           "host": [
-            "{{base_URL}}"
+            "103",
+            "12",
+            "205",
+            "81"
           ],
+          "port": "8890",
           "path": [
             "api",
             "v1",
@@ -179,7 +146,7 @@
           "query": [
             {
               "key": "userID",
-              "value": "536d6b33-bc40-4974-9725-c3418e2c9869",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
               "uuid": "72fa841a-7de0-4fbf-8f74-e77741462400"
             }
           ]
@@ -189,12 +156,12 @@
     },
     {
       "name": "GET /userContacts?userID=",
-      "id": "c3298721-9c7c-43fd-829b-335a5a0272e8",
+      "id": "791afed0-bf11-4dab-af93-fb57654ed73c",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{base_URL}}/api/v1/userContacts?userID=536d6b33-bc40-4974-9725-c3418e2c9869",
+          "raw": "{{base_URL}}/api/v1/userContacts?userID=6415f8dd-57aa-42b1-99ce-c025583e8323",
           "host": [
             "{{base_URL}}"
           ],
@@ -206,7 +173,7 @@
           "query": [
             {
               "key": "userID",
-              "value": "536d6b33-bc40-4974-9725-c3418e2c9869",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
               "uuid": "e4f8330b-98ce-4446-9397-7ba38ab06cc4"
             }
           ]
@@ -216,13 +183,13 @@
     },
     {
       "name": "POST /profileCreation",
-      "id": "40e55b90-0c4e-4f9c-8377-ac334eaca3f3",
+      "id": "bf180d75-8295-4092-94bd-f791ace1d643",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"email\": \"adrian.basil.58@gmail.com\",\r\n    \"password_hash\": \"12345\",\r\n    \"name\": \"Abu Bakr Siddique Alt\",\r\n    \"mobile_number\": \"+8801681602525\",\r\n    \"avatar_url\": null,\r\n    \"country\": \"BD\"\r\n}",
+          "raw": "{\r\n    \"email\": \"adrian.basil.58@gmail.com\",\r\n    \"password_hash\": \"12345\",\r\n    \"name\": \"Abu Bakr Siddique Alt\",\r\n    \"mobile_number\": \"+8801681602515\",\r\n    \"avatar_url\": null,\r\n    \"country\": \"BD\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -244,14 +211,42 @@
       "response": []
     },
     {
+      "name": "GET /profile/avatar",
+      "id": "33e11241-dc2a-49d5-b22c-36684a90a480",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_URL}}/api/v1/profile/avatar?user_id=6415f8dd-57aa-42b1-99ce-c025583e8323",
+          "host": [
+            "{{base_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "profile",
+            "avatar"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
+              "uuid": "463175b1-d3d8-4c5f-8974-f04533615667"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "POST /addContactDynamic",
-      "id": "287f71cb-84ec-48ea-938a-8bdecf2d5e5e",
+      "id": "2b695e31-d0b6-4c87-821b-87cc1efafa83",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"user_id\": \"536d6b33-bc40-4974-9725-c3418e2c9869\",\r\n  \"pico_contact\": [\r\n    {\r\n      \"name\": \"oaskdadas\",\r\n      \"number\": \"+12312123121341234\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    },\r\n    {\r\n      \"name\": \"dsad\",\r\n      \"number\": \"+880123123712373\",\r\n      \"mail\": \"andsad@gmail.com\",\r\n      \"country\": \"AU\"\r\n    }\r\n  ]\r\n}",
+          "raw": "{\r\n  \"user_id\": \"6415f8dd-57aa-42b1-99ce-c025583e8323\",\r\n  \"pico_contact\": [\r\n    {\r\n      \"name\": \"nazmul hasan\",\r\n      \"number\": \"+92348274\",\r\n      \"mail\": \"nazmulkp@gmail.com\",\r\n      \"country\": \"GER\"\r\n    }\r\n  ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -273,14 +268,53 @@
       "response": []
     },
     {
+      "name": "POST /profile/avatar",
+      "id": "3672b8cd-934e-4755-8c86-b8d480a53b0e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "user_id",
+              "value": "6415f8dd-57aa-42b1-99ce-c025583e8323",
+              "type": "text",
+              "uuid": "f991abeb-72ef-4ce7-a5fc-2c9a999cd602"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "7a86c321-c040-4a24-a217-5ce66aca6b8b",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_URL}}/api/v1/profile/avatar/check",
+          "host": [
+            "{{base_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "profile",
+            "avatar",
+            "check"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "POST /loginMock",
-      "id": "e7465497-6923-4cd6-b007-521996112f20",
+      "id": "4799e706-7844-4434-a75a-ad6f32dedf2f",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"identifier\" : \"+8801681602525\",\r\n    \"password\": \"12345\"\r\n}",
+          "raw": "{\r\n    \"identifier\" : \"+8801681602515\",\r\n    \"password\": \"12345\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -303,13 +337,13 @@
     },
     {
       "name": "POST /verifyOTP",
-      "id": "7c7fd607-0cfb-4927-8de1-5f790d17358d",
+      "id": "31ff1f50-e80d-4f50-96ad-8ceae571bdb0",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"user_id\": \"536d6b33-bc40-4974-9725-c3418e2c9869\",\r\n    \"otp\": \"111111\"\r\n}",
+          "raw": "{\r\n    \"user_id\": \"6415f8dd-57aa-42b1-99ce-c025583e8323\",\r\n    \"otp\": \"111111\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -329,51 +363,11 @@
         }
       },
       "response": []
-    },
-    {
-      "name": "POST /profile/avatar",
-      "id": "c8c16137-0fab-4722-9a97-a1fc4824c3d7",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "user_id",
-              "value": "536d6b33-bc40-4974-9725-c3418e2c9869",
-              "type": "text",
-              "uuid": "f991abeb-72ef-4ce7-a5fc-2c9a999cd602"
-            },
-            {
-              "key": "avatar",
-              "type": "file",
-              "uuid": "7a86c321-c040-4a24-a217-5ce66aca6b8b",
-              "src": [
-                "/C:/Temp Folders/Learning Materials/Web Development - IoT/picoBackendContacts/test12.png"
-              ]
-            }
-          ]
-        },
-        "url": {
-          "raw": "{{base_URL}}/api/v1/profile/avatar",
-          "host": [
-            "{{base_URL}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "profile",
-            "avatar"
-          ]
-        }
-      },
-      "response": []
     }
   ],
   "variable": [
     {
-      "id": "7f5748f0-4f98-4ea8-b7ef-71031e5588c5",
+      "id": "74df93a9-0aa7-4716-bccd-a3a998c02185",
       "key": "base_URL",
       "value": ""
     }
